@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yona Nabet - Resume</title>
+    <style>
+        /* Material Design 3 Variables */
+        :root {
+            --md-sys-color-primary: #1976d2;
+            --md-sys-color-on-primary: #ffffff;
+            --md-sys-color-primary-container: #e3f2fd;
+            --md-sys-color-on-primary-container: #0d47a1;
+            --md-sys-color-secondary: #455a64;
+            --md-sys-color-on-secondary: #ffffff;
+            --md-sys-color-secondary-container: #eceff1;
+            --md-sys-color-on-secondary-container: #263238;
+            --md-sys-color-surface: #fefbff;
+            --md-sys-color-on-surface: #1c1b1f;
+            --md-sys-color-surface-variant: #f4f4f4;
+            --md-sys-color-on-surface-variant: #49454f;
+            --md-sys-color-outline: #79747e;
+            --md-sys-color-outline-variant: #cac4d0;
+            
+            /* Typography Scale */
+            --md-sys-typescale-display-large-font-size: 57px;
+            --md-sys-typescale-display-medium-font-size: 45px;
+            --md-sys-typescale-display-small-font-size: 36px;
+            --md-sys-typescale-headline-large-font-size: 32px;
+            --md-sys-typescale-headline-medium-font-size: 28px;
+            --md-sys-typescale-headline-small-font-size: 24px;
+            --md-sys-typescale-title-large-font-size: 22px;
+            --md-sys-typescale-title-medium-font-size: 16px;
+            --md-sys-typescale-title-small-font-size: 14px;
+            --md-sys-typescale-body-large-font-size: 16px;
+            --md-sys-typescale-body-medium-font-size: 14px;
+            --md-sys-typescale-body-small-font-size: 12px;
+            
+            /* Elevation */
+            --md-sys-elevation-level0: none;
+            --md-sys-elevation-level1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-level2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-level3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+            
+            /* Shape */
+            --md-sys-shape-corner-none: 0px;
+            --md-sys-shape-corner-extra-small: 4px;
+            --md-sys-shape-corner-small: 8px;
+            --md-sys-shape-corner-medium: 12px;
+            --md-sys-shape-corner-large: 16px;
+            --md-sys-shape-corner-extra-large: 28px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--md-sys-color-surface);
+            color: var(--md-sys-color-on-surface);
+            line-height: 1.5;
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 24px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 48px;
+            background: linear-gradient(135deg, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-surface-variant) 100%);
+            padding: 32px;
+            border-radius: var(--md-sys-shape-corner-large);
+            box-shadow: var(--md-sys-elevation-level2);
+        }
+
+        .name {
+            font-size: var(--md-sys-typescale-display-small-font-size);
+            font-weight: 900;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 8px;
+            letter-spacing: -0.25px;
+            line-height: 1.2;
+        }
+
+        .title {
+            font-size: var(--md-sys-typescale-title-large-font-size);
+            font-weight: 400;
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .contact-info {
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .contact-info span {
+            margin-right: 24px;
+            display: inline-block;
+            background: var(--md-sys-color-surface);
+            padding: 8px 16px;
+            border-radius: var(--md-sys-shape-corner-small);
+            box-shadow: var(--md-sys-elevation-level1);
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .description {
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            line-height: 1.6;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 0;
+            text-align: justify;
+            font-weight: 400;
+            background: var(--md-sys-color-surface);
+            padding: 24px;
+            border-radius: var(--md-sys-shape-corner-medium);
+            box-shadow: var(--md-sys-elevation-level1);
+        }
+
+        /* Section Headers */
+        .section-title {
+            font-size: var(--md-sys-typescale-headline-medium-font-size);
+            font-weight: 700;
+            color: var(--md-sys-color-primary);
+            margin: 48px 0 32px 0;
+            letter-spacing: -0.5px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--md-sys-color-primary-container);
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 40px;
+            padding: 32px;
+            background: var(--md-sys-color-surface);
+            border-radius: var(--md-sys-shape-corner-large);
+            box-shadow: var(--md-sys-elevation-level2);
+            border-left: 4px solid var(--md-sys-color-primary);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            margin-bottom: 16px;
+        }
+
+        .job-title {
+            font-size: var(--md-sys-typescale-title-large-font-size);
+            font-weight: 600;
+            color: var(--md-sys-color-primary);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .company {
+            font-size: var(--md-sys-typescale-title-medium-font-size);
+            font-weight: 700;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 8px;
+        }
+
+        .period {
+            font-size: var(--md-sys-typescale-body-medium-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            font-weight: 500;
+            margin-bottom: 16px;
+            background: var(--md-sys-color-secondary-container);
+            padding: 4px 12px;
+            border-radius: var(--md-sys-shape-corner-small);
+            display: inline-block;
+        }
+
+        .job-description {
+            margin-bottom: 20px;
+        }
+
+        .job-description p {
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            line-height: 1.6;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 12px;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        /* Tech Tags */
+        .tech-container {
+            margin-top: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+            padding: 8px 16px;
+            border-radius: var(--md-sys-shape-corner-small);
+            font-size: var(--md-sys-typescale-body-small-font-size);
+            font-weight: 500;
+            border: 1px solid var(--md-sys-color-outline-variant);
+            transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+            cursor: pointer;
+        }
+
+        .tech-tag:hover {
+            background-color: var(--md-sys-color-secondary);
+            color: var(--md-sys-color-on-secondary);
+            box-shadow: var(--md-sys-elevation-level1);
+            transform: translateY(-1px);
+        }
+
+        /* Languages Section */
+        .languages-section {
+            margin: 48px 0;
+        }
+
+        .language-grid {
+            background: var(--md-sys-color-surface);
+            padding: 24px;
+            border-radius: var(--md-sys-shape-corner-large);
+            box-shadow: var(--md-sys-elevation-level1);
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-name {
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .language-level {
+            font-size: var(--md-sys-typescale-body-medium-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            font-weight: 400;
+            background: var(--md-sys-color-primary-container);
+            padding: 4px 12px;
+            border-radius: var(--md-sys-shape-corner-small);
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin: 48px 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .skill-category {
+            background-color: var(--md-sys-color-surface);
+            padding: 24px;
+            border-radius: var(--md-sys-shape-corner-medium);
+            box-shadow: var(--md-sys-elevation-level2);
+            border-top: 3px solid var(--md-sys-color-primary);
+        }
+
+        .skill-category h4 {
+            font-size: var(--md-sys-typescale-title-medium-font-size);
+            font-weight: 600;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 16px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            padding: 6px 12px;
+            border-radius: var(--md-sys-shape-corner-small);
+            font-size: var(--md-sys-typescale-body-small-font-size);
+            font-weight: 500;
+            transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+            cursor: pointer;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            box-shadow: var(--md-sys-elevation-level1);
+            transform: translateY(-1px);
+        }
+
+        /* Education Section */
+        .education-section {
+            margin: 48px 0;
+        }
+
+        .education-item {
+            background-color: var(--md-sys-color-surface);
+            padding: 24px;
+            border-radius: var(--md-sys-shape-corner-medium);
+            margin-bottom: 16px;
+            box-shadow: var(--md-sys-elevation-level1);
+            border-left: 4px solid var(--md-sys-color-secondary);
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-degree {
+            font-size: var(--md-sys-typescale-title-medium-font-size);
+            font-weight: 600;
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 4px;
+        }
+
+        .education-school {
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+
+        .education-period {
+            font-size: var(--md-sys-typescale-body-medium-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            font-weight: 400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 16px;
+            }
+
+            .header {
+                padding: 24px;
+            }
+
+            .name {
+                font-size: var(--md-sys-typescale-headline-large-font-size);
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .contact-info span {
+                display: block;
+                margin-bottom: 8px;
+                margin-right: 0;
+            }
+
+            .experience-item {
+                padding: 24px;
+            }
+
+            .tech-tags,
+            .skill-tags {
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name {
+                font-size: var(--md-sys-typescale-headline-medium-font-size);
+            }
+
+            .section-title {
+                font-size: var(--md-sys-typescale-headline-small-font-size);
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 20px;
+                max-width: none;
+                background: white;
+            }
+
+            .header {
+                background: #f5f5f5 !important;
+                box-shadow: none !important;
+            }
+
+            .experience-item,
+            .skill-category,
+            .education-item,
+            .language-grid {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+
+            .tech-tag,
+            .skill-tag {
+                background-color: #f0f0f0 !important;
+                color: #333 !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+
+        /* Focus and Accessibility */
+        .tech-tag:focus,
+        .skill-tag:focus {
+            outline: 2px solid var(--md-sys-color-primary);
+            outline-offset: 2px;
+        }
+
+        /* Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Additional Visual Enhancements */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
+            border-radius: var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large) 0 0;
+        }
+
+        .header {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="name">YONA NABET</h1>
+        <div class="title">Backend Technical Lead • Senior Software Developer • System Architecture Expert</div>
+        <div class="contact-info">
+            <span>📞 0545546123</span>
+            <span>📧 <a href="mailto:yonanabet1@gmail.com">yonanabet1@gmail.com</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/yona-nabeth-5ba122194/" target="_blank">LinkedIn Profile</a></span>  
+        </div>
+        <p class="description">
+            Highly experienced Backend Technical Lead and Software Developer with 9+ years of experience in full-stack and backend development, including 2 years as a team lead in the Israeli Air Force and recent years leading critical backend projects at Intel. Proven track record in designing scalable microservices, optimizing performance, leading backend architecture efforts, and implementing cloud-based solutions across AWS and Azure. Passionate about building reliable, secure, and maintainable systems with deep hands-on coding and architectural ownership.
+        </p>
+    </div>
+
+    <h2 class="section-title">Professional Experience</h2>
+
+    <div class="experience-item">
+        <div class="job-header">
+            <div class="job-title">Backend Technical Lead</div>
+            <div class="company">Intel (Unison Application)</div>
+            <div class="period">2023 — 2025</div>
+        </div>
+        
+        <div class="job-description">
+            <p>Led a major architecture migration from a monolithic backend system to scalable microservices, significantly enhancing maintainability, scalability, and overall performance. Acted as the primary technical authority for backend systems, leading incident management and troubleshooting.</p>
+            
+            <p><strong>Mission-Critical Applications:</strong> Designed, developed, and maintained three key backend applications serving thousands of users:</p>
+            
+            <p>• <strong>DPC (Device Profile Controller):</strong> End-to-end management of user/device permissions, roles, and feature configurations, providing dynamic access management for enterprise clients</p>
+            
+            <p>• <strong>OM (Operations Manager):</strong> Managed software versions, enforced user updates, provided real-time analytics and statistics on user behavior and version adoption, significantly enhancing operational visibility</p>
+            
+            <p>• <strong>UDT (Unison Distributed Tracing):</strong> Built a comprehensive monitoring system enabling detailed distributed tracing across backend and frontend systems, streamlining troubleshooting processes and improving system reliability</p>
+            
+            <p>Identified and solved critical memory leaks, enhancing system performance and stability under production loads. Worked closely with frontend and product teams, defining clear API contracts, integration strategies, and collaborative problem-solving methodologies.</p>
+        </div>
+
+        <div class="tech-container">
+            <div class="tech-tags">
+                <span class="tech-tag">AWS Lambda</span>
+                <span class="tech-tag">API Gateway</span>
+                <span class="tech-tag">Cognito</span>
+                <span class="tech-tag">S3</span>
+                <span class="tech-tag">CloudFront</span>
+                <span class="tech-tag">Azure Entra ID</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Datadog</span>
+                <span class="tech-tag">Jenkins</span>
+                <span class="tech-tag">SQLMesh</span>
+                <span class="tech-tag">Socket.IO</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Kubernetes</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="job-header">
+            <div class="job-title">Team Lead & Full Stack Developer</div>
+            <div class="company">Ofek324 IAF (Israeli Air Force)</div>
+            <div class="period">2021 — 2023</div>
+        </div>
+        
+        <div class="job-description">
+            <p>Leading a team of 7 developers on an Agile full-stack project, managing team workload and ensuring development processes are optimized for efficiency and quality. Successfully delivered multiple high-impact projects on time while maintaining code quality standards.</p>
+            
+            <p>Drawing on previous experience as a full-stack developer within this team, provided technical guidance, anticipated potential issues, and supported the team in delivering high-quality products through effective leadership and collaboration. Fostered team growth through mentorship and knowledge sharing.</p>
+            
+            <p>Implemented comprehensive code review processes, established development best practices, and maintained 98% uptime across all managed systems serving critical defense operations.</p>
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="job-header">
+            <div class="job-title">Full Stack Developer</div>
+            <div class="company">Ofek324 IAF (Israeli Air Force)</div>
+            <div class="period">2017 — 2021</div>
+        </div>
+        
+        <div class="job-description">
+            <p><strong>Distributed Tracing Pioneer:</strong> Developed from scratch the first successful distributed tracing system of the whole IDF, monitoring all various systems and reporting processes as they take place. This groundbreaking system became the standard for monitoring across the entire defense organization, processing millions of events daily.</p>
+            
+            <p>Designed and implemented complex microservices architecture solutions running on OpenShift Kubernetes. Implemented extensive detailed unit/component/integration and e2e tests to ensure system reliability and maintainability across distributed environments.</p>
+            
+            <p>Developed client-side applications using TypeScript and Angular, creating intuitive user interfaces for complex monitoring and analytics systems. Managed workflows with comprehensive DevOps practices using industry-standard tools for continuous integration and deployment.</p>
+        </div>
+
+        <div class="tech-container">
+            <div class="tech-tags">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring</span>
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Oracle</span>
+                <span class="tech-tag">Kafka</span>
+                <span class="tech-tag">Zookeeper</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">OpenShift</span>
+                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">ELK Stack</span>
+                <span class="tech-tag">Splunk</span>
+                <span class="tech-tag">Jenkins</span>
+                <span class="tech-tag">Bitbucket</span>
+                <span class="tech-tag">Bamboo</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="languages-section">
+        <h2 class="section-title">Languages</h2>
+        <div class="language-grid">
+            <div class="language-item">
+                <span class="language-name">Hebrew</span>
+                <span class="language-level">Native Proficiency</span>
+            </div>
+            <div class="language-item">
+                <span class="language-name">French</span>
+                <span class="language-level">Native Proficiency</span>
+            </div>
+            <div class="language-item">
+                <span class="language-name">English</span>
+                <span class="language-level">Professional Working Proficiency</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming Languages & Frameworks</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Spring</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">FastAPI</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Databases & Cache</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Oracle</span>
+                    <span class="skill-tag">Redis</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Cloud & Infrastructure</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Azure Entra ID</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">OpenShift</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Observability & Monitoring</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Datadog</span>
+                    <span class="skill-tag">Distributed Tracing</span>
+                    <span class="skill-tag">ELK Stack</span>
+                    <span class="skill-tag">Splunk</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h4>DevOps & CI/CD</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">SQLMesh</span>
+                    <span class="skill-tag">Bamboo</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Bitbucket</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Messaging & Queues</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Kafka & Zookeeper</span>
+                    <span class="skill-tag">Redis Pub/Sub</span>
+                    <span class="skill-tag">Socket.IO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="education-section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-item">
+            <div class="education-degree">BSc in Computer Science</div>
+            <div class="education-school">College of Management Academic Studies</div>
+            <div class="education-period">2019 — Present</div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-degree">Mamram Computer Programming Course (IDF)</div>
+            <div class="education-school">Israeli Defense Forces</div>
+            <div class="education-period">2016 — 2017</div>
+        </div>
+    </div>
+</body>
+</html>
